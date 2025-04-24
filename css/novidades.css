@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    color: #2d2d2d;
+    background-color: #fff;
+    scrollbar-width: none;
+-ms-overflow-style: none;
+}
+  
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+header {
+  background-color: #e7f5e9;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logotipo img {
+  height: 70px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.logotipo img:hover {
+  transform: scale(1.10);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2d2d2d;
+  font-weight: bold;
+  font-size: 1.05rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #347a3f;
+  color: white;
+}
+
+.secao-video {
+  padding: 80px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.secao-video h1 {
+  font-size: 2.5rem;
+  color: #347a3f;
+  margin-bottom: 20px;
+}
+
+.descricao-video {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.caixa-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.caixa-video img,
+.caixa-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.rodape {
+  background-color: #e7f5e9;
+  color: #2d2d2d;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.95rem;
+  margin-top: 50px;
+  border-top: 2px solid #cce8d0;
+}
+
+.icones-sociais {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.icones-sociais a {
+  background-color: #347a3f;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.icones-sociais a:hover {
+  background-color: #2d5d32;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .secao-video h1 {
+    font-size: 2rem;
+  }
+
+  .descricao-video {
+    font-size: 1rem;
+  }
+}
